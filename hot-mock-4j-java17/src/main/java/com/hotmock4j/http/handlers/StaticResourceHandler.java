@@ -18,7 +18,7 @@ public class StaticResourceHandler implements HttpHandler {
             path = "/index.html";
         }
 
-        try (InputStream is = getClass().getResourceAsStream("/ui" + path)) {
+        try (InputStream is = getClass().getResourceAsStream("/hotmock4j-ui" + path)) {
             if (is == null) {
                 sendNotFound(exchange, path);
                 return;
